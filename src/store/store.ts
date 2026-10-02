@@ -1,8 +1,10 @@
 // Author: Beni Niyogisubizo
 
 import { createStore, applyMiddleware } from "redux";
-import logger from "redux-logger";
+import { createLogger } from "redux-logger";
 import { rootReducer } from "./reducers";
+
+const logger = createLogger();
 
 export const store = createStore(
   rootReducer,
